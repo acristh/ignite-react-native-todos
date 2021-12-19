@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Image, TouchableOpacity, View, Text, StyleSheet, FlatListProps } from 'react-native';
+import { FlatList, Image, TouchableOpacity, View, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import { ItemWrapper } from './ItemWrapper';
@@ -37,7 +37,6 @@ export function TasksList({ tasks, toggleTaskDone, removeTask }: TasksListProps)
               >
                 <View 
                   testID={`marker-${index}`}
-                  //TODO - use style prop 
                   style={
                     item.done ? styles.taskMarkerDone : styles.taskMarker
                   }

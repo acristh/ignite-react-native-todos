@@ -1,4 +1,3 @@
-import { doExpression } from '@babel/types';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
@@ -16,7 +15,6 @@ export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   function handleAddTask(newTaskTitle: string) {
-    //TODO - add new task
     const data: TaskProsp = {
       id: new Date().getTime(),
       title: newTaskTitle,
