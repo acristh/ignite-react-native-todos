@@ -5,11 +5,24 @@ import { Header } from '../components/Header';
 import { Task, TasksList } from '../components/TasksList';
 import { TodoInput } from '../components/TodoInput';
 
+interface TaskProsp {
+  id:number;
+  title: string;
+  done: boolean;
+}
+
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   function handleAddTask(newTaskTitle: string) {
     //TODO - add new task
+    const data: TaskProsp = {
+      id: new Date().getTime(),
+      title: newTaskTitle,
+      done: false,
+    }
+
+    setTasks(oldState => [...oldState, data]);
   }
 
   function handleToggleTaskDone(id: number) {
